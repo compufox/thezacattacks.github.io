@@ -1,0 +1,131 @@
+body {
+/*  to fix the navbar outline not lining up properly*/
+    padding-right: 28px; 
+/*    min-width: 400px; */
+}
+
+a:visited {
+    color:#b58900;
+}
+
+a.selected, a.selected:visited {
+    color:#D8830D;
+}
+
+div.top-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+}
+
+div.container > img {
+    margin-top: 4%;
+    margin-bottom: 1%;
+}
+
+div.container > img.left {
+    float: left;
+    margin-right: 2.5%;
+}
+
+div.container > img.right {
+    float: right;
+    margin-left: 2.5%;
+}
+
+div.dropdown {
+    display: none;
+}
+
+div.container > * {
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    border-bottom: 3px solid black;
+    padding: 5px 5px 5px 5px;
+    margin-right: 5px;
+}
+
+nav > a {
+    font-size: 26;
+    display: block;
+}
+
+nav > div {
+    flex-shrink: 0;
+    display: none;
+}
+
+img {
+    width: 50%;
+}
+
+
+@media screen and (max-width: 600px) {
+    /* nav stuff */
+    a.selected {
+	display: block;
+	order: 99;
+
+	text-decoration: none;
+	margin-left: 30%;
+    }
+
+    a.selected, a.selected:visited {
+	color: #D8830D;
+    }
+	
+    
+    nav {
+	align-items: center;
+	justify-content: flex-start;
+    }
+    
+    nav > div {
+	flex-shrink: 1;
+	display: block;
+	order: -1;
+    }
+
+    nav > a {
+	display: none;
+    }
+
+    div.dropdown {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+    }
+
+    
+    /* content stuff */
+
+    div.top-container {
+	margin-top: 4%;
+	align-content: center;
+	align-items: center;
+    }
+
+    div.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+    }
+
+    img {
+	height: 100%;
+    }
+
+    div.container > img {}
+    
+}
